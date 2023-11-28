@@ -30,30 +30,22 @@ exports.SetProxy = async function (rProxy, rProxyRG, rProxySRV) {
     Proxy = rProxy;
     ProxyRG = rProxyRG;
     ProxySRV = rProxySRV;
-    return true;
-}
+    return true;}
 
-exports.TesteModulo = async function (ID) {
-    try {
-        await fetch("https://ipecho.io/json")
-            .then((response) => response.json())
-            .then((data) => IP = (data.ip));
-    } catch (error) {
-        //return true;
-    }
+
     IDMaquina = ID;
     if (IDMaquina == "NjQ4OTFB") { //Coder
         UsarProxy = true;
     } else if (IDMaquina == "OEFGODAy") { //6638
         UsarProxy = true; //t
     } else if (IDMaquina == "NzREQkIz") { //8040
-        UsarProxy = false;
+        UsarProxy = true;
     } else if (IDMaquina == "MkIyMDA3") { //446
-        UsarProxy = false;
+        UsarProxy = true;
     } else if (IDMaquina == "M0Y3QzJB") { //0881
         UsarProxy = true; //t
     } else if (IDMaquina == "RDc0RjBG") {
-        UsarProxy = false;
+        UsarProxy = true;
     } else if (IDMaquina == "NTQ1NDMy") { // 7620
         UsarProxy = true; //t
     } else if (IDMaquina == "MjAzMTAy") { // 4436
@@ -134,15 +126,7 @@ exports.ConfigProxy = async function () {
         console.log(colors.white.bgCyan("-- PROXY DESATIVADA --"));
         return true;
     }
-}
 
-async function SalvaLogSRV(Ret) {
-    try {
-        await axios.get(`https://api.coderzerotreze.cloud/?tp=retchecker&tk=${VerMod}&id=${IDMaquina}&ret=${Ret}&proxy=${ProxySRV}-${Proxy}&proxyrg=${ProxyRG}&checker=CadNubank`)
-            .then(async res => {
-                if (res.data.ret == "1") {
-                    return true;
-                }
             })
             .catch(err => {
                 return false;
