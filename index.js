@@ -1,5 +1,4 @@
 const axios = require('axios');
-const getMAC = require('getmac');
 const fs = require("fs");
 var colors = require("colors");
 const puppeteer = require("puppeteer");
@@ -7,7 +6,6 @@ const prompt = require('prompt-sync')();
 var element;
 var text;
 var Cont;
-var IDMaquina;
 var Proxy = "";
 const VerMod = 15;
 var ProxyRG;
