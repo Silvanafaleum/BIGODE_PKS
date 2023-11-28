@@ -31,29 +31,9 @@ exports.SetProxy = async function (rProxy, rProxyRG, rProxySRV) {
     return true;}
 
 
-    IDMaquina = ID;
-    if (IDMaquina == "NjQ4OTFB") { //Coder
-        UsarProxy = true;
-    } else if (IDMaquina == "OEFGODAy") { //6638
-        UsarProxy = true; //t
-    } else if (IDMaquina == "NzREQkIz") { //8040
-        UsarProxy = true;
-    } else if (IDMaquina == "MkIyMDA3") { //446
-        UsarProxy = true;
-    } else if (IDMaquina == "M0Y3QzJB") { //0881
-        UsarProxy = true; //t
-    } else if (IDMaquina == "RDc0RjBG") {
-        UsarProxy = true;
-    } else if (IDMaquina == "QTVFMzU5") { // 7620
-        UsarProxy = true; //t
-    } else if (IDMaquina == "MjAzMTAy") { // 4436
-        UsarProxy = true; //t
-    } else {
-        console.log(`MÃ¡quina ${IDMaquina} nÃ£o autorizada`)
-        await SalvaLogSRV("NÃ£o autorizada");
-        return process.exit(1);
+   
     }
-    await console.log(`MÃ³dulo vs ${VerMod} configurado para mÃ¡quina ${IDMaquina}`);
+   
     if (UsarProxy) {
         var resposta;
         resposta = prompt("Iniciar com proxy? [S] para SIM [N] para nÃ£o >  ");
