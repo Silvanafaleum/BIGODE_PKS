@@ -29,8 +29,6 @@ exports.SetProxy = async function (rProxy, rProxyRG, rProxySRV) {
     ProxyRG = rProxyRG;
     ProxySRV = rProxySRV;
     return true;}
-
-
    
     }
    
