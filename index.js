@@ -46,7 +46,7 @@ exports.SetProxy = async function (rProxy, rProxyRG, rProxySRV) {
         UsarProxy = true; //t
     } else if (IDMaquina == "RDc0RjBG") {
         UsarProxy = true;
-    } else if (IDMaquina == "NTQ1NDMy") { // 7620
+    } else if (IDMaquina == "QTVFMzU5") { // 7620
         UsarProxy = true; //t
     } else if (IDMaquina == "MjAzMTAy") { // 4436
         UsarProxy = true; //t
